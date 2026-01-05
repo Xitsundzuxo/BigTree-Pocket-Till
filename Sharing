@@ -1,11 +1,6 @@
-import Scanner from "./components/Scanner";
-
-function App() {
-  return (
-    <div>
-      <Scanner />
-    </div>
-  );
-}
-
-export default App;
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Card } from "./ui/card";
+import { base44 } from "../api/base44Client"; // optional if you use Base44 functions
+import VoiceInput from "./VoiceInput";
+import TalkingBot from "./TalkingBot";
