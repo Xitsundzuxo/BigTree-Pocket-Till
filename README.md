@@ -3,7 +3,7 @@
 Pocket Till is a simple web-based till and expense tracking application built with React.
 It helps users record sales, track daily usage, and manage basic transaction history.
 
-This project was originally created using Base44 and later exported to be edited and run locally.
+This project was originally created to help customers to calculate their expenses before they arrive at till, so they know the actual price of their items, and to know which items to leave and which to pay for rather than leaving items at the till. 
 
 ---
 
