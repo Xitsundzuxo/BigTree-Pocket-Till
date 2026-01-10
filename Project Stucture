@@ -1,0 +1,16 @@
+BigTree-pocket-till-app/
+│
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   ├── logo.png        ← place your tree logo here
+│
+├── src/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── app.js
+│
+├── service-worker.js
+├── server.js
+└── package.json
