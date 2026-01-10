@@ -1,7 +1,7 @@
 {
-  "name": "pocket-till-app",
+  "name": "bigtree-pocket-till",
   "version": "1.0.0",
-  "description": "Offline pocket till PWA",
+  "description": "BigTree Pocket Till - Offline mobile till calculator",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
