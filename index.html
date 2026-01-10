@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>BigTree Pocket Till</title>
+
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="BigTree Pocket Till Logo" class="logo">
+    <h1>BigTree Pocket Till</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <input type="text" id="itemName" placeholder="Item name">
+      <input type="number" id="itemPrice" placeholder="Price (R)">
+      <button id="addItemBtn">Add Item</button>
+    </section>
+
+    <section class="card">
+      <ul id="itemList"></ul>
+      <p><strong>Total: R<span id="totalAmount">0.00</span></strong></p>
+    </section>
+
+    <section class="card">
+      <input type="number" id="cashInput" placeholder="Cash given (R)">
+      <p>Change: R<span id="changeAmount">0.00</span></p>
+      <button id="speakBtn">🔊 Speak</button>
+    </section>
+
+    <section class="card">
+      <button id="historyBtn">📅 View History</button>
+      <ul id="historyList" class="hidden"></ul>
+    </section>
+  </main>
+
+  <script src="/src/js/app.js"></script>
+</body>
+                                                       </html>
