@@ -88,3 +88,39 @@ body.dark .card {
 body.dark button {
   background: #333;
 }
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f5132;
+  padding: 0.5rem 0.8rem;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-small {
+  width: 40px;
+  height: 40px;
+}
+
+.app-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Dark mode button */
+.mode-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  background: #198754;
+  color: white;
+  font-size: 1.2rem;
+  }
