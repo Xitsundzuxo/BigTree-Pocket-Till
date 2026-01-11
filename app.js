@@ -86,14 +86,35 @@ window.removeItem = id => {
   saveSession();
 };
 
-cameraInput.onchange = () => {
+cameraInput.onchange = async () => {
   if (!cameraInput.files.length) return;
 
-  // Since OCR offline is unreliable,
-  // we assist the user instead of guessing
-  alert(
-    "Please confirm item name and price manually.\nCamera capture is for reference."
-  );
+  const image = cameraInput.files[0];
+
+  itemName.value = "Scanning...";
+  itemPrice.value = "";
+
+  const { data } = await Tesseract.recognize(image, "eng", {
+    logger: m => console.log(m)
+  });
+
+  const text = data.text;
+
+  // Extract price (Rxx.xx or xx.xx)
+  const priceMatch = text.match(/R?\s?(\d+\.\d{2})/);
+  if (priceMatch) {
+    itemPrice.value = priceMatch[1];
+  }
+
+  // Guess item name (first non-price line)
+  const lines = text.split("\n").map(l => l.trim()).filter(Boolean);
+  const nameLine = lines.find(l => !l.match(/\d/));
+
+  if (nameLine) {
+    itemName.value = nameLine;
+  } else {
+    itemName.value = "Unknown item";
+  }
 };
 
 cashInput.oninput = () => {
