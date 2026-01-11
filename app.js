@@ -83,9 +83,17 @@ function saveHistory(total, cash, change) {
     cash,
     change
   });
-
   localStorage.setItem("bigtree-history", JSON.stringify(history));
 }
+
+  function saveSession() {
+  const session = {
+    items,
+    cash: cashInput.value
+  };
+  localStorage.setItem(SESSION_KEY, JSON.stringify(session));
+}
+
 
 historyBtn.onclick = () => {
   historyList.classList.toggle("hidden");
