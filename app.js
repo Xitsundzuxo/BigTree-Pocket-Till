@@ -35,6 +35,7 @@ addItemBtn.onclick = () => {
   itemName.value = "";
   itemPrice.value = "";
   render();
+  saveSession();
 };
 
 function render() {
@@ -60,9 +61,13 @@ function render() {
 window.removeItem = id => {
   items = items.filter(i => i.id !== id);
   render();
+  saveSession();
 };
 
-cashInput.oninput = calculateChange;
+cashInput.oninput = () => {
+  calculateChange();
+  saveSession();
+};
 
 function calculateChange() {
   const cash = parseFloat(cashInput.value) || 0;
@@ -81,6 +86,10 @@ speakBtn.onclick = () => {
   speechSynthesis.speak(msg);
 
   saveHistory(total, cash, change);
+  items = [];
+cashInput.value = "";
+saveSession();
+render();
 };
 
 function saveHistory(total, cash, change) {
