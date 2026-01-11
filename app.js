@@ -15,6 +15,13 @@ const historyBtn = document.getElementById("historyBtn");
 const historyList = document.getElementById("historyList");
 
 const SESSION_KEY = "bigtree-current-session";
+const savedSession = JSON.parse(localStorage.getItem(SESSION_KEY));
+
+if (savedSession) {
+  items = savedSession.items || [];
+  cashInput.value = savedSession.cash || "";
+  render();
+}
 
 addItemBtn.onclick = () => {
   if (!itemName.value || !itemPrice.value) return;
