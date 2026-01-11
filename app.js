@@ -18,6 +18,20 @@ const cameraInput = document.getElementById("cameraInput");
 const SESSION_KEY = "bigtree-current-session";
 const savedSession = JSON.parse(localStorage.getItem(SESSION_KEY));
 
+const darkModeBtn = document.getElementById("darkModeBtn");
+
+if (localStorage.getItem("darkMode") === "on") {
+  document.body.classList.add("dark");
+}
+
+darkModeBtn.onclick = () => {
+  document.body.classList.toggle("dark");
+  localStorage.setItem(
+    "darkMode",
+    document.body.classList.contains("dark") ? "on" : "off"
+  );
+};
+
 if (savedSession) {
   items = savedSession.items || [];
   cashInput.value = savedSession.cash || "";
