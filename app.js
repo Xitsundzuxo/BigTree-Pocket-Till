@@ -14,6 +14,8 @@ const speakBtn = document.getElementById("speakBtn");
 const historyBtn = document.getElementById("historyBtn");
 const historyList = document.getElementById("historyList");
 
+const SESSION_KEY = "bigtree-current-session";
+
 addItemBtn.onclick = () => {
   if (!itemName.value || !itemPrice.value) return;
 
