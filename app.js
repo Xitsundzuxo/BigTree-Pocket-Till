@@ -100,3 +100,41 @@ historyBtn.onclick = () => {
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/service-worker.js");
 }
+
+startScanBtn.onclick = () => {
+  scanner.classList.remove("hidden");
+
+  Quagga.init({
+    inputStream: {
+      name: "Live",
+      type: "LiveStream",
+      target: scanner,
+      constraints: {
+        facingMode: "environment"
+      }
+    },
+    decoder: {
+      readers: [
+        "ean_reader",
+        "ean_8_reader",
+        "code_128_reader",
+        "upc_reader"
+      ]
+    }
+  }, err => {
+    if (err) {
+      alert("Camera error");
+      return;
+    }
+    Quagga.start();
+  });
+};
+
+Quagga.onDetected(result => {
+  const code = result.codeResult.code;
+
+  itemName.value = `Barcode: ${code}`;
+  scanner.classList.add("hidden");
+
+  Quagga.stop();
+});
