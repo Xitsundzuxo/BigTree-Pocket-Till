@@ -20,9 +20,15 @@ const savedSession = JSON.parse(localStorage.getItem(SESSION_KEY));
 
 const darkModeBtn = document.getElementById("darkModeBtn");
 
+function updateModeIcon() {
+  darkModeBtn.textContent =
+    document.body.classList.contains("dark") ? "☀️" : "🌙";
+}
+
 if (localStorage.getItem("darkMode") === "on") {
   document.body.classList.add("dark");
 }
+updateModeIcon();
 
 darkModeBtn.onclick = () => {
   document.body.classList.toggle("dark");
@@ -30,6 +36,7 @@ darkModeBtn.onclick = () => {
     "darkMode",
     document.body.classList.contains("dark") ? "on" : "off"
   );
+  updateModeIcon();
 };
 
 if (savedSession) {
