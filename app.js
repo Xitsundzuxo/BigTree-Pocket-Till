@@ -71,8 +71,10 @@ function render() {
     li.className = "item-row";
     li.innerHTML = `
       ${item.name} - R${item.price.toFixed(2)}
-      <button class="remove-btn" onclick="removeItem(${item.id})">❌</button>
+      <button class="remove-btn" onclick="removeItem(${item.id})">🗑️ Remove item</button>
     `;
+  
+      </button>
     itemList.appendChild(li);
   });
 
