@@ -1,1 +1,33 @@
 📸 Take picture of price tag or receipt
+
+function speakChange() {
+  const changeAmount = document.getElementById("change").innerText;
+
+  if (!changeAmount || changeAmount === "0.00") {
+    speakText("There is no change");
+    return;
+  }
+
+  const message = `Your change is ${changeAmount} rand`;
+
+  speakText(message);
+}
+
+function speakText(text) {
+  if (!("speechSynthesis" in window)) {
+    alert("Speech not supported on this device");
+    return;
+  }
+
+  // Stop any previous speech
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  utterance.lang = "en-ZA"; // South Africa English
+  utterance.rate = 1;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  window.speechSynthesis.speak(utterance);
+}
