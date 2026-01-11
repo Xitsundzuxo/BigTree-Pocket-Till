@@ -71,3 +71,20 @@ video {
   width: 100%;
   border-radius: 8px;
 }
+
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark header {
+  background: #000;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+}
+
+body.dark button {
+  background: #333;
+}
