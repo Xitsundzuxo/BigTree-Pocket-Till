@@ -13,6 +13,7 @@ const changeAmountEl = document.getElementById("changeAmount");
 const speakBtn = document.getElementById("speakBtn");
 const historyBtn = document.getElementById("historyBtn");
 const historyList = document.getElementById("historyList");
+const cameraInput = document.getElementById("cameraInput");
 
 const SESSION_KEY = "bigtree-current-session";
 const savedSession = JSON.parse(localStorage.getItem(SESSION_KEY));
@@ -62,6 +63,16 @@ window.removeItem = id => {
   items = items.filter(i => i.id !== id);
   render();
   saveSession();
+};
+
+cameraInput.onchange = () => {
+  if (!cameraInput.files.length) return;
+
+  // Since OCR offline is unreliable,
+  // we assist the user instead of guessing
+  alert(
+    "Please confirm item name and price manually.\nCamera capture is for reference."
+  );
 };
 
 cashInput.oninput = () => {
