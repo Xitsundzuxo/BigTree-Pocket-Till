@@ -3,6 +3,8 @@ let history = JSON.parse(localStorage.getItem("bigtree-history")) || [];
 
 const itemName = document.getElementById("itemName");
 const itemPrice = document.getElementById("itemPrice");
+const startScanBtn = document.getElementById("startScanBtn");
+const scanner = document.getElementById("scanner");
 const addItemBtn = document.getElementById("addItemBtn");
 const itemList = document.getElementById("itemList");
 const totalAmountEl = document.getElementById("totalAmount");
