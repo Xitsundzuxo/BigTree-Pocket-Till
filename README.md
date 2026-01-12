@@ -1,42 +1,42 @@
-# Pocket-Till 💰
+**BigTree-Pocket-Till** 💰
 
 Pocket Till is a simple web-based till and expense tracking application built with React.
-It helps users record sales, track daily usage, and manage basic transaction history.
+It helps users to record sales, track daily usage, and manage basic transaction history.
 
 This project was originally created to help customers to calculate their expenses before they arrive at till, so they know the actual price of their items, and to know which items to leave and which to pay for rather than leaving items at the till. 
 
 ---
 
-## 🚀 Features
+**Features**
 
 - Add and track transactions
 - View daily usage / history
 - Simple and clean user interface
-- Built with modern React (.jsx)
-- Runs locally using Node.js
+- Built with html, css, and java
+- Runs locally using Node.js (for development purposes only)
 
 ---
 
-## 🛠️ Tech Stack
+**Tech Stack** 🛠️ 
 
-- **Frontend:** React (JSX)
-- **Build Tool:** Vite
-- **Language:** JavaScript
+- **Frontend:** html
+- **Build Tool:** VS Code
+- **Language:** Java
 - **Runtime:** Node.js
 - **Styling:** CSS
 - **Version Control:** Git & GitHub
 
 ---
 
-## 📦 Installation & Setup
+**Installation & Setup** 📦
 
-### Prerequisites
+**Prerequisites**
 Make sure you have the following installed:
 - Node.js (LTS recommended)
 - npm (comes with Node.js)
 
 ---
 
-### 1️⃣ Clone the repository
+**Clone the repository**
 ```bash
-git clone https://github.com/your-username/pocket-till.git
+git clone https://gigithub.coxitsundzuxomBigTree-Pocket-Till.git
