@@ -39,4 +39,4 @@ Make sure you have the following installed:
 
 **Clone the repository**
 ```bash
-git clone https://gigithub.coxitsundzuxomBigTree-Pocket-Till.git
+git clone https://gigithub.com/xitsundzuxo/BigTree-Pocket-Till.git
